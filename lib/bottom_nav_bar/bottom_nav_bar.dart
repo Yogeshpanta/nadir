@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:uzme/Request.dart';
+//import 'package:uzme/bottom_nav_bar/RequestForm.dart';
 //import 'package:uzme/home_page/home_page.dart';
 import 'package:uzme/home_page/home_page_one.dart';
 
@@ -15,10 +17,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static  final List<Widget> _widgetOptions = <Widget>[
     MyHomePage(),
-    const Text(
-      'Index 1: find vehicles',
-      style: optionStyle,
-    ),
+    RequestForGarbage(),
     const Text(
       'Index 2: Map',
       style: optionStyle,
@@ -51,8 +50,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.route),
-              label: 'Find vehicles',
+              icon: Icon(Icons.request_page),
+              label: 'Request',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.map),

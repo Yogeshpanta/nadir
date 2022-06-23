@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:uzme/home_page/general_info.dart';
+//import 'package:uzme/home_page/general_info.dart';
 import 'package:uzme/sign_log_in_page/log_in_page.dart';
+//import 'package:uzme/sign_log_in_page/sign_in_page.dart';
 
 import 'donate.dart';
 //import 'package:uzme/bottom_nav_bar/bottom_nav_bar.dart';
@@ -20,6 +21,7 @@ class MyHomePage extends StatelessWidget {
         children: [
           Row(
             children: [
+
               Container(
 
                 padding: const EdgeInsets.only( left: 10),
@@ -86,10 +88,38 @@ class MyHomePage extends StatelessWidget {
               width: double.infinity,
               color: const Color(0xffD9D9D9),
               padding: const EdgeInsets.only(top:10),
-              child: const Text('Today    oct 12',
+              child: const Text('      Organic: Today oct 12  5.00 PM',
               textAlign: TextAlign.center,
           ),),
           ),
+          Card(
+            elevation: 5,
+            margin: const EdgeInsets.only(right: 19, left: 19, top: 10),
+            child: Container(
+              // margin: EdgeInsets.only(right: 19, left: 19),
+              height: 38,
+              width: double.infinity,
+              color: const Color(0xffD9D9D9),
+              padding: const EdgeInsets.only(top:10),
+              child: const Text('Others: oct 15  8.00 AM',
+                textAlign: TextAlign.center,
+              ),),
+          ),
+
+          Card(
+            elevation: 5,
+            margin: const EdgeInsets.only(right: 19, left: 19, top: 10),
+            child: Container(
+              // margin: EdgeInsets.only(right: 19, left: 19),
+              height: 38,
+              width: double.infinity,
+              color: const Color(0xffD9D9D9),
+              padding: const EdgeInsets.only(top:10),
+              child: const Text('Reusable: oct 15  8.00 AM',
+                textAlign: TextAlign.center,
+              ),),
+          ),
+
           Card(
             elevation: 5,
             margin: const EdgeInsets.only(right: 19, left: 19, top: 10,
@@ -100,53 +130,62 @@ class MyHomePage extends StatelessWidget {
               width: double.infinity,
               color: const Color(0xffD9D9D9),
               padding: const EdgeInsets.only(top:10),
-              child: const Text('Tommorrow    oct 13  8.00 AM',
+              child: const Text('Recyleable: oct 17  8.00 AM',
                 textAlign: TextAlign.center,
               ),),
           ),
+
            ElevatedButton(
                 onPressed: ( ) {
     Navigator.push(context, MaterialPageRoute(
     builder:(context)=> const Donates()));
     },
-              child: const Text(' Donations',
+              child: const Text('Donations',
                 textAlign: TextAlign.center,),
               ),
-
-
-
-          Container(
-            padding: const EdgeInsets.only(top:100),
-            child:  ElevatedButton(
-              onPressed:  ( ) {
-    Navigator.push(context, MaterialPageRoute(
-    builder:(context)=> const GeneralInfo()));
-    },
-
-              child: const Text('Log In'),
-              
-            ),
+          ElevatedButton(
+            onPressed: ( ) {
+              Navigator.push(context, MaterialPageRoute(
+                  builder:(context)=> const LogInPage()));
+            },
+            child: const Text(' Sign out  ',
+              textAlign: TextAlign.center,),
           ),
 
 
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children:  [
-              Container(
-                padding: const EdgeInsets.only(left: 90),
-                child: const Text(' you do not have account?'),
-              ),
-              TextButton(onPressed: ( ) {
-                Navigator.push(context, MaterialPageRoute(
-                    builder:(context)=> const LogInPage()));
-              },
-
-
-                  child: const Text('sign up', style: TextStyle(
-                      color: Colors.blue
-                  ),))
-            ],
-          ),
+    //
+    //       Container(
+    //         padding: const EdgeInsets.only(top:100),
+    //         child:  ElevatedButton(
+    //           onPressed:  ( ) {
+    // Navigator.push(context, MaterialPageRoute(
+    // builder:(context)=> const GeneralInfo()));
+    // },
+    //
+    //           child: const Text('Log In'),
+    //
+    //         ),
+    //       ),
+    //
+    //
+    //       Row(
+    //         crossAxisAlignment: CrossAxisAlignment.center,
+    //         children:  [
+    //           Container(
+    //             padding: const EdgeInsets.only(left: 90),
+    //             child: const Text(' you do not have account?'),
+    //           ),
+    //           TextButton(onPressed: ( ) {
+    //             Navigator.push(context, MaterialPageRoute(
+    //                 builder:(context)=> const LogInPage()));
+    //           },
+    //
+    //
+    //               child: const Text('sign up', style: TextStyle(
+    //                   color: Colors.blue
+    //               ),))
+    //         ],
+    //       ),
         ],
       ),
 

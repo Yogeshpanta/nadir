@@ -6,6 +6,7 @@ class CategoryItem extends StatelessWidget{
   final String id;
   final String title;
   final Color color;
+
   void selectCategory(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
         builder: (_){
@@ -21,6 +22,7 @@ class CategoryItem extends StatelessWidget{
       child:  Container(
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
+
           gradient: LinearGradient(
             colors: [color.withOpacity(0.7), color,],
             begin: Alignment.topLeft,

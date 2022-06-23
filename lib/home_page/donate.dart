@@ -16,8 +16,19 @@ class Donates extends StatelessWidget {
       // ),
       body: Column(
           children: [
-                Container(
-                    padding: const EdgeInsets.only(top: 100, left: 30,
+            Container(
+              alignment: Alignment.topLeft,
+              padding: EdgeInsets.only(top: 70),
+
+
+              child: IconButton(onPressed: (){
+                Navigator.pop(context);
+              },
+                  icon: const Icon(Icons.arrow_back),),
+            ),
+
+            Container(
+                    padding: const EdgeInsets.only( left: 30,
                     bottom: 80),
                 child: const Text('Donates',
         style: TextStyle(

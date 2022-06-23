@@ -4,7 +4,7 @@ class GivePage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text('Give to others'),
+        title: const Text('Give to others'),
       ),
     );
   }
