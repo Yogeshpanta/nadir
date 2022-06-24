@@ -4,6 +4,8 @@ import 'package:uzme/Request.dart';
 //import 'package:uzme/home_page/home_page.dart';
 import 'package:uzme/home_page/home_page_one.dart';
 
+import 'maps/my_maps.dart';
+
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
 
@@ -18,10 +20,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   static  final List<Widget> _widgetOptions = <Widget>[
     MyHomePage(),
     RequestForGarbage(),
-    const Text(
-      'Index 2: Map',
-      style: optionStyle,
-    ),
+    MyMap()
   ];
 
   void _onItemTapped(int index) {
